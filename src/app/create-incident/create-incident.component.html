@@ -1,0 +1,42 @@
+ <div class="col-md-6 offset-md-3">
+ <h3>Create ticket</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Ticket Number</label>
+      <input type="text" class="form-control" id="ticketNumber" [(ngModel)]="incident.ticketNumber" name="ticketNumber">
+    </div>
+  
+    <div class="form-group">
+      <label>Incident Description</label>
+      <input type="text" class="form-control" id="incidentDescription" [(ngModel)]="incident.incidentDescription" name="incidentDescription">
+    </div>
+  
+    <div class="form-group">
+      <label>Priority</label>
+      <input type="text" class="form-control" id="ticketPriority" [(ngModel)]="incident.ticketPriority" name="ticketPriority">
+    </div>
+  
+    <div class="form-group">
+      <label>Impact</label>
+      <input type="text" class="form-control" id="impact" [(ngModel)]="incident.impact" name="impact">
+    </div>
+  
+    <div class="form-group">
+      <label>Start Date</label>
+      <input type="text" class="form-control" id="startDateTime" [(ngModel)]="incident.startDateTime" name="startDateTime">
+    </div>
+  
+    <div class="form-group">
+      <label>Duration</label>
+      <input type="text" class="form-control" id="duration" [(ngModel)]="incident.duration" name="duration">
+    </div>
+  
+    <div class="form-group">
+      <label>Update</label>
+      <input type="text" class="form-control" id="updates" [(ngModel)]="incident.updates" name="updates">
+    </div>
+  
+    <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+</div>
+  

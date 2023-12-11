@@ -1,0 +1,16 @@
+services:
+  incidents-management:
+    container_name: "incidents-management-container"
+    build: .
+    image: incidents-management:v1
+    ports: 
+       - 8080:8080
+       - 8085:8080
+    expose:
+       - 8080
+    networks:
+       - internalnet
+networks:
+  internalnet:
+    driver: bridge
+

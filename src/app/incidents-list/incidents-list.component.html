@@ -1,0 +1,29 @@
+<h2>Incidents</h2>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> Ticket Number</th>
+            <th> Incident</th>
+            <th> Priority</th>
+            <th> Impact </th>
+            <th> Date Occured</th>
+            <th> Status</th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let incident of incidents">
+            <td>{{incident.ticketNumber}}</td>
+            <td>{{incident.incidentDescription}}</td>
+            <td>{{incident.ticketPriority}}</td>
+            <td>{{incident.impact}}</td>
+            <td>{{incident.startDateTime}}</td>
+            <td>{{incident.duration}}</td>
+            <td><button (click) = "addIncidentUpdate(incident.id)" type="button" class="btn btn-info">Add Update</button> </td>
+            <td><button (click) = "updateIncident(incident.id)" type="button" class="btn btn-success">Edit</button> </td>
+            <td><button (click) = "deleteIncident(incident.id)" type="button" class="btn btn-danger" style="margin-left: 10px;">delete</button> </td>
+        </tr>
+
+    </tbody>
+
+</table>

@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{ incident.incidentDescription }}</h2>
+          <div class="incident-details">
+            <p><strong>Impact:</strong> {{ incident.impact }}</p>
+            <p><strong>Date Occurred:</strong> {{ incident.startDateTime | date }}</p>
+            <p><strong>Status:</strong> {{ incident.duration }}</p>
+            <p><strong>Details:</strong> {{ incident.incidentDetails }}</p>
+            <!-- Add more incident properties as needed -->
+            <button [routerLink]="['/incident-updates', incident.id]" class="btn btn-info">Updates</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
